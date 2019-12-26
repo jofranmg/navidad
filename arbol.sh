@@ -33,7 +33,7 @@ new_year=$(date +'%Y')
 let new_year++
 tput setaf 1; tput bold
 tput cup $lin $((c - 6)); echo ¡FELIZ NAVIDAD!
-tput cup $((lin + 1)) $((c - 10)); Y próspero año 2020
+tput cup $((lin + 1)) $((c - 10)); echo Y próspero año
 let c++
 k=1
 
@@ -57,7 +57,7 @@ while true; do
         column[$k$i]=$co
         color=$(((color+1)%8))
         # Flashing text
-        sh=1
+        sh=4
         for l in 2 0 2 0
         do
             tput cup $((lin+1)) $((c+sh))
